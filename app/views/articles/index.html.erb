@@ -1,9 +1,9 @@
 
-<%= render 'longer_featured' %>
+<%= render_if @hightlights[0].present?, 'longer_featured', article: @hightlights[0]%>
 
 <div class="row mb-2">
-    <%= render 'medium_featured' %>
-    <%= render 'medium_featured' %>
+    <%= render_if @hightlights[1].present?, 'medium_featured', article: @hightlights[1] %>
+    <%= render_if @hightlights[2].present?, 'medium_featured', article: @hightlights[2] %>
 </div>
 
 <div class="row g-5">
