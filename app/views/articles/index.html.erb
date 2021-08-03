@@ -12,12 +12,13 @@
         From the Firehose
       </h3>
 
-      <%= link_to 'Nova Resenha', new_article_path %>
-
+      <p>
+        <%= link_to 'Nova Resenha', new_article_path, class: 'btn btn-primary' %>
+      </p>
      
       <%= render @articles %>
       <%= render 'pagination' %>
-    </div>
+    </div> 
 
     <%= render 'right_side' %>
 </div>
