@@ -1,7 +1,10 @@
-<h1><%= @article.title %></h1>
+<article class="blog-post">
+    <h2 class="blog-post-title"><%= @article.title %></h2>
+    <p class="blog-post-meta">
+        <%= year_right(@article.created_at) %> by <%= @article.user.email %>
+    </p>
 
-
-<p><%= @article.body %></p>
+    <p><%= @article.body %></p>
 
 <ul>
     <%= link_to 'Edit', edit_article_path(@article), class: 'btn btn-dark' %>
@@ -11,3 +14,4 @@
         class: 'btn btn-danger' %>
     <%= link_to 'Back', root_path, class: 'btn btn-info' %>
 </ul>
+</article>

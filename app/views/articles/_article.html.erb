@@ -1,6 +1,7 @@
 <article class="blog-post">
     <h2 class="blog-post-title"><%= article.title %></h2>
-    <p class="blog-post-meta"><%= year_right(article.created_at) %> by <a href="#">Srta.Poe</a></p>
+    <p class="blog-post-meta">
+        <%= year_right(article.created_at) %> <%= article.user.email %></p>
 
     <p><%= truncate(article.body, length: 150) %></p>
 
