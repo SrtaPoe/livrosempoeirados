@@ -63,3 +63,5 @@ gem "kaminari", "~> 1.2"
 gem "devise", "~> 4.8"
 
 gem 'omniauth', '~> 1.3', '>= 1.3.1'
+
+gem "pundit", "~> 2.1"

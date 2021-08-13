@@ -57,7 +57,9 @@ end
     params.require(:article).permit(:title, :body, :category_id)
     #permite apenas os parametros que quero
   end
+  
   def set_article
     @article = Article.find(params[:id])
+    authorize @article
 end
 end
