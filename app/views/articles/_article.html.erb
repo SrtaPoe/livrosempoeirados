@@ -7,9 +7,9 @@
 
     <p><%= link_to 'Continue lendo...', article, class: 'btn btn-secondary' %></p>
 
-    <%= link_to 'Editar', edit_article_path(article),class:'btn btn-dark' %>
+    <%= link_to 'Editar', edit_article_path(article),class:'btn btn-dark' if policy(article).update? %>
     <%= link_to 'Apagar', article_path(article), 
         method: :delete,
         data: {confirm: 'Are you sure you want to delete? '},
-        class: 'btn btn-danger' %>
+        class: 'btn btn-danger' if policy(article).destroy? %>
   </article>
